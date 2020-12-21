@@ -12,6 +12,7 @@ class ImagesModel {
   let imageText:String?
   let answer:Bool
   
+  // StringとBoolが外部からImagesModelをinitしたときに入ってくる
   init(imageName:String, correctOrNot:Bool) {
 
     imageText = imageName
