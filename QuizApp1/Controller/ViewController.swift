@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-  
+class ViewController: UIViewController, NowScoreDelegate {
+
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var maxScoreLabel: UILabel!
   
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
   }
   
   // モーダルから戻ってきたときに0にしたい
@@ -37,6 +37,13 @@ class ViewController: UIViewController {
     
     // ImagesListから持ってくる
     imageView.image = UIImage(named: imagesList.list[questionNumber].imageText)
+    
+    if UserDefaults.standard.object(forKey: "beforeCount") != nil {
+      maxScore = UserDefaults.standard.object(forKey: "beforeCount") as! Int
+    }
+    
+    // 最高得点の表示
+    maxScoreLabel.text = String(maxScore)
   }
   
   @IBAction func answer(_ sender: Any) {
@@ -84,6 +91,10 @@ class ViewController: UIViewController {
     }
   }
   
+  func nowScore(score: Int) {
+    maxScoreLabel.text = String(score)
+  }
+  
   // NextViewControllerに値を渡す
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
@@ -93,6 +104,7 @@ class ViewController: UIViewController {
       
       nextVC.correctedCount = correctCount
       nextVC.wrongCount = wrongCount
+      nextVC.delegate = self
     }
   }
 }
