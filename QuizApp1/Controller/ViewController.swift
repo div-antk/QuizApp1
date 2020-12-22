@@ -50,7 +50,6 @@ class ViewController: UIViewController {
     } else if (sender as AnyObject).tag == 2 {
       // バツボタンだった場合
       pickedAnswer = false
-
     }
     
     // 回答チェック
@@ -82,8 +81,16 @@ class ViewController: UIViewController {
     }
   }
   
+  // NextViewControllerに値を渡す
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
+    
+    if segue.identifier == "next" {
+      
+      let nextVC = segue.destination as! NextViewController
+      
+      nextVC.correctedCount = correctCount
+      nextVC.wrongCount = wrongCount
+    }
   }
 }
 

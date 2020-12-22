@@ -9,12 +9,19 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+  @IBOutlet weak var correctLabel: UILabel!
+  @IBOutlet weak var wrongLabel: UILabel!
+  
+  var correctedCount = Int()
+  var wrongCount = Int()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      correctLabel.text = String(correctedCount)
+      wrongLabel.text = String(wrongCount)
     }
-    
+
 
     /*
     // MARK: - Navigation
