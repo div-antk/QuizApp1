@@ -27,6 +27,7 @@ class ViewController: UIViewController, NowScoreDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    imageView.layer.cornerRadius = 20.0
   }
   
   // モーダルから戻ってきたときに0にしたい
