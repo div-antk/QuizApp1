@@ -16,6 +16,7 @@
 		3B8117D22591F44D00577695 /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8117D12591F44D00577695 /* SoundFile.swift */; };
 		3B94D9632590E88900D32FEB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94D9622590E88900D32FEB /* ImagesModel.swift */; };
 		3B94D9662590E9C600D32FEB /* ImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94D9652590E9C600D32FEB /* ImagesList.swift */; };
+		3BAE35212593730700681064 /* WithoutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE35202593730700681064 /* WithoutMP3.swift */; };
 		3BEB0308258F7B010060364E /* batsuSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB0305258F7B010060364E /* batsuSound.mp3 */; };
 		3BEB0309258F7B010060364E /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB0306258F7B010060364E /* sound.mp3 */; };
 		3BEB030A258F7B010060364E /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB0307258F7B010060364E /* maruSound.mp3 */; };
@@ -34,6 +35,7 @@
 		3B8117D12591F44D00577695 /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		3B94D9622590E88900D32FEB /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		3B94D9652590E9C600D32FEB /* ImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesList.swift; sourceTree = "<group>"; };
+		3BAE35202593730700681064 /* WithoutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutMP3.swift; sourceTree = "<group>"; };
 		3BEB0305258F7B010060364E /* batsuSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = batsuSound.mp3; path = "../../../Downloads/Resources/iOS14画像集/QuestionApp1素材/batsuSound.mp3"; sourceTree = "<group>"; };
 		3BEB0306258F7B010060364E /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = "../../../Downloads/Resources/iOS14画像集/QuestionApp1素材/sound.mp3"; sourceTree = "<group>"; };
 		3BEB0307258F7B010060364E /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = maruSound.mp3; path = "../../../Downloads/Resources/iOS14画像集/QuestionApp1素材/maruSound.mp3"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				3B94D9622590E88900D32FEB /* ImagesModel.swift */,
 				3B8117D12591F44D00577695 /* SoundFile.swift */,
+				3BAE35202593730700681064 /* WithoutMP3.swift */,
 				3B94D9652590E9C600D32FEB /* ImagesList.swift */,
 			);
 			path = Model;
@@ -192,6 +195,7 @@
 				3B29F8B2258F788E008F1D83 /* AppDelegate.swift in Sources */,
 				3B29F8B4258F788E008F1D83 /* SceneDelegate.swift in Sources */,
 				3B94D9632590E88900D32FEB /* ImagesModel.swift in Sources */,
+				3BAE35212593730700681064 /* WithoutMP3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

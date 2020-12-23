@@ -15,9 +15,9 @@ class SoundFile {
   func playSound(fileName:String, extentionName:String) {
     // 再生する
     let soundURL = Bundle.main.url(forResource: fileName, withExtension: extentionName)
-    
+        
     do {
-      try player = AVAudioPlayer(contentsOf: soundURL!)
+      player = try AVAudioPlayer(contentsOf: soundURL!)
       player?.play()
     } catch {
       print("エラー(´・ω・｀)")
