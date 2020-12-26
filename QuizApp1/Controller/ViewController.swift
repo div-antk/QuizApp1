@@ -22,12 +22,26 @@ class ViewController: UIViewController, NowScoreDelegate {
   // IBActionで検知した正答がどちらなのかを取得する変数
   var pickedAnswer = false
   
+  // mp3
   var soundFile = SoundFile()
+  
+  // グラデーション
+  var changeColor = ChangeColor()
+  var gradientLayer = CAGradientLayer()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // 角丸
     imageView.layer.cornerRadius = 20.0
+    
+    // グラデーション
+    gradientLayer = changeColor.changeColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+    // boundsは全体を表す
+    gradientLayer.frame = view.bounds
+    
+    view.layer.insertSublayer(gradientLayer, at: 0)
   }
   
   // モーダルから戻ってきたときに0にしたい
@@ -100,6 +114,7 @@ class ViewController: UIViewController, NowScoreDelegate {
   }
   
   func nowScore(score: Int) {
+    soundFile.playSound(fileName: "sound", extentionName: "mp3")
     maxScoreLabel.text = String(score)
   }
   
